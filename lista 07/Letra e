@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+  int num, total = 0, divisor = 1;
+  printf("\n - Digite um numero:\n -> ");
+  scanf("%i", &num);
+  if(num > 0){
+    do {
+    if (num % divisor == 0) {
+      total += divisor;
+    }
+    divisor++;
+  } while (total < num);
+  if (total == num) {
+    printf("\n -> E um numero perfeito");
+  } else {
+    printf("\n -> Nao e um numero perfeito.");
+  }
+  }else{
+    printf("\n -> Numero invalido.");
+  }
+  
+  return 0;
+}
