@@ -1,0 +1,94 @@
+#include <stdio.h>
+
+int main() {
+  int cont = 0, sexo, altura, alt_menor, alt_maior, mulheres = 0,
+      alt_mulheres = 0, alt_pop = 0;
+  float populacao = 0, homens = 0;
+  printf("\n Informe o seu sexo atraves de um codigo mostrado abaixo:");
+  do {
+    printf(
+        "\n\n  1 --> Masculino: \n  2 --> Feminino: \n  3 --> Outro:\n    --> ");
+    scanf("%i", &sexo);
+    switch (sexo) {
+    case 1:
+      printf("        ---> Digite a sua altura em cm: \n        ---> ");
+      scanf("%i", &altura);
+      if (altura > 0) {
+        if (cont == 0) {
+          alt_menor = altura;
+          alt_maior = altura;
+        }
+        if (altura < alt_menor) {
+          alt_menor = altura;
+        }
+        if (altura > alt_maior) {
+          alt_maior = altura;
+        }
+        homens++;
+        populacao++;
+        cont++;
+        alt_pop += altura;
+      } else {
+        printf("\n     --> Valor invalido");
+      }
+      break;
+    case 2:
+      printf("        ---> Digite a sua altura em cm: \n        ---> ");
+      scanf("%i", &altura);
+      if (altura > 0) {
+        if (cont == 0) {
+          alt_menor = altura;
+          alt_maior = altura;
+        }
+        if (altura < alt_menor) {
+          alt_menor = altura;
+        }
+        if (altura > alt_maior) {
+          alt_maior = altura;
+        }
+        mulheres++;
+        alt_mulheres += altura;
+        populacao++;
+        cont++;
+        alt_pop += altura;
+      } else {
+        printf("\n     --> Valor invalido");
+      }
+      break;
+    case 3:
+      printf("        ---> Digite a sua altura em cm: \n        ---> ");
+      scanf("%i", &altura);
+      alt_pop += altura;
+      if (altura > 0) {
+        if (cont == 0) {
+          alt_menor = altura;
+          alt_maior = altura;
+        }
+        if (altura < alt_menor) {
+          alt_menor = altura;
+        }
+        if (altura > alt_maior) {
+          alt_maior = altura;
+        }
+        populacao++;
+        cont++;
+        alt_pop += altura;
+      } else {
+        printf("\n     --> Valor invalido");
+      }
+      break;
+    default:
+      printf("\n     --> Valor invalido.");
+      break;
+    }
+  } while (cont < 3);
+  printf("\n - Essa e a menor altura: %i\n - Essa e a maior altura: %i",
+         alt_menor, alt_maior);
+  printf("\n\n - Essa e a media de altura das mulheres: %i",
+         (alt_mulheres / mulheres));
+  printf("\n - Essa e a media de altura da população: %.0f",
+         (alt_pop / populacao));
+  printf("\n\n - Essa e a porcentagem de homens: %.2f",
+         ((homens / populacao) * 100));
+  return 0;
+}
