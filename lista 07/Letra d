@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+  int num, cont = 1, subcont = 1;
+  do {
+    if (subcont == 1) {
+      printf("\n - Digite um numero:\n -> ");
+      scanf("%i", &num);
+    } else {
+      printf("\n - Digite outro numero:\n -> ");
+      scanf("%i", &num);
+    }
+    if (num > 100 && num < 200) {
+      cont++;
+    }
+    subcont++;
+  } while (num > 0);
+  printf("\n - Foram digitados %i numeros acima de 100 e abaixo de 200.", cont);
+  return 0;
+}
