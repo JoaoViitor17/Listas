@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+  int num, par_total = 0, impar_total = 1, cont = 1;
+  do {
+    if (cont == 1) {
+    printf("\n - Digite um numero:\n -> ");
+    scanf("%i", &num);
+    } else {
+      printf("\n - Digite outro numero:\n -> ");
+      scanf("%i", &num);
+    }
+    if (num % 2 == 0 && num > 0) {
+      par_total += num;
+    } else if (num % 2 != 0 && num > 0) {
+      impar_total *= num;
+    }
+    cont++;
+  } while (num > 0);
+  printf("\n   --> Esse e o produto dos numeros impares: %i\n   --> Essa e a soma dos numeros pares: %i", impar_total, par_total);
+  return 0;
+}
