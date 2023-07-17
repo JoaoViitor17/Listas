@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+  int num = 1001, cont = 0;
+  do {
+    if(num % 11 == 5) {
+      cont++;
+      printf("\n %i", num);
+    }
+    num++;
+  } while (cont < 5);
+
+  return 0;
+}
