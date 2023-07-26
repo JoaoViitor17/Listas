@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  int num, numerador = 1, divisor, soma = 0;
+  printf("\n - Digite um numero maior que 3:\n  --> ");
+  scanf("%i", &num);
+  if (num > 3) {
+    for (divisor = num; divisor >= 1; (divisor--) && (numerador += 2)) {
+      if (divisor == num) {
+        printf("\n  --> %i/%i ", numerador, divisor);
+      } else {
+        printf("+ %i/%i ", numerador, divisor);
+      }
+      soma += (numerador/divisor);
+    }
+  } else {
+    printf("\n - Valor invalido.");
+  }
+  return 0;
+}
