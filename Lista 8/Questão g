@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+  int linha, coluna, cont_linha, cont_coluna;
+  printf("\n - Digite a quantidade de linhas:"
+         "\n  --> ");
+  scanf("%i", &linha);
+  printf("\n - Digite a quantidade de colunas:"
+         "\n  --> ");
+  scanf("%i", &coluna);
+  for ((cont_linha = 1) && (cont_coluna = 1); cont_linha <= linha; (cont_linha++) && (cont_coluna = 1)) {
+         printf("\n");
+    while (cont_coluna <= coluna) {
+      printf("   *");
+      if(cont_coluna == coluna){
+        printf("\n");
+      }
+      cont_coluna++;
+    }
+  }
+  return 0;
+}
