@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  int cont_linha, cont_coluna, linha, coluna, linha_torre, coluna_torre;
+
+  printf("\n - Digite a linha que a sua torre está no tabuleiro:"
+         "\n  --> ");
+  scanf("%i", &linha_torre);
+  printf("\n - Digite a coluna que a sua torre está:"
+         "\n  --> ");
+  scanf("%i", &coluna_torre);
+  printf("\n\n################################################################\n\n");
+  
+  for ((cont_linha = 1) && (cont_coluna = 1) && (linha = 8) && (coluna = 8); cont_linha <= linha; (cont_linha++) && (cont_coluna = 1))/*codigo para fazer o tabuleiro*/ {
+    
+    printf("\n");
+    while (cont_coluna <= coluna) {
+      if ((linha_torre == cont_linha) && (coluna_torre == cont_coluna)) {
+        
+        printf("   O");
+        
+      }
+      if (linha_torre == cont_linha && (coluna_torre != cont_coluna) /*&& (cont_coluna != coluna_torre)*/) {
+        
+        printf("   X");
+      }
+      if ((cont_coluna == coluna_torre) && (linha_torre != cont_linha)) {
+        
+        printf("   X");
+      }
+      if ((linha_torre != cont_linha) && (coluna_torre != cont_coluna)) {
+        
+        printf("   *");
+      }
+      if (cont_coluna == coluna) {
+        
+        printf("\n");
+      }
+      //printf(" %i", cont_coluna);
+      cont_coluna++;
+      
+    }
+  }
+  printf("\n\n################################################################\n\n");
+  return 0;
+}
