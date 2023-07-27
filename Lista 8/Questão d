@@ -1,56 +1,43 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
+    int X, Y, Z, intervalo = 0, resto = 0, cont, divisor = 1;
   
-  int X = 0, Y = 0, intervalo = 0, resto = 0, cont = 0, divisor = 1;
-  
-  
-  printf("\n - Digite o valor de X:"
-         "\n  --> ");
-  scanf("%i", &X);
-  printf("\n - Digite o valor de Y:"
-         "\n  --> ");
-  scanf("%i", &Y);
+    printf("\n - Digite o valor de X:"
+           "\n  --> ");
+    scanf("%i", &X);
+    printf("\n - Digite o valor de Y:"
+           "\n  --> ");
+    scanf("%i", &Y);
 
-  if (X > Y) {
-    
-    for (cont = Y; cont <= X; cont++) { 
-      divisor = 1;
-      printf("\n  --> divisores de %i sao:", cont);
-      while (divisor <= cont) {
-        
-        if (cont % divisor == 0) {
-          if (divisor == 1){
-            printf("\n   --> %i", divisor);
-          } else {
-          printf(", %i", divisor);
-          }
-        }
-        divisor++;
-      }
-      cont++;
+    if (Y > X) {
+        Z = X;
+        X = Y;
+        Y = Z;
     }
-  } else  if (Y > X) {
-     
-    for (cont = X; cont <= Y; cont++) {
-      divisor = 1;
-      printf("\n  --> divisores de %i sao:", cont);
-      while (divisor <= cont) {
-        
-        if (cont % divisor == 0) {
-          if (divisor == 1){
-            printf("\n   --> %i", divisor);
-          } else {
-          printf(", %i", divisor);
-          }
+    for (cont = Y; cont <= X; cont++) {
+        divisor = 1;
+        printf("\n    --> Divisores de %i sao:\n", cont);
+
+        while (divisor <= cont) {
+            
+            if (cont % divisor == 0) {
+                if (divisor == 1 && divisor == cont){
+                    printf("        -------------------------------"
+                           "\n        --> {%i}", divisor);
+                } else if (divisor == 1) {
+                    printf("        -------------------------------"
+                           "\n        --> {%i", divisor);
+                } else if (divisor == cont) {
+                    printf(", %i}"
+                           "\n        -------------------------------\n", divisor);
+                } else {
+                    printf(", %i", divisor);
+                }
+            }
+                divisor++;
         }
-        divisor++;
-      }
-      cont++;
     }
-  } else {
-    printf("\n - Os numeros sao iguais portando nao existe intervalo.");
-  }
   
   return 0;
 }
