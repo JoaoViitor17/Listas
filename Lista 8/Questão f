@@ -2,6 +2,7 @@
 
 int main() {
     int linha, coluna, cont_linha, cont_coluna;
+
     printf("\n - Estamos fazendo uma matriz, digite a quantidade de linhas:"
            "\n  --> ");
     scanf("%i", &linha);
@@ -10,6 +11,7 @@ int main() {
     scanf("%i", &coluna);
     printf("\n##################################################\n"
            "\n");
+
     for ((cont_linha = 1) && (cont_coluna = 1); (cont_linha <= linha); (cont_linha++) && (cont_coluna = 1)){
         printf("\n");
         while (cont_coluna <= coluna) {
