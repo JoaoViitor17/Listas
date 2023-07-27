@@ -21,5 +21,6 @@ int main() {
             cont_coluna++;
         }
     }
+
   return 0;
 }
