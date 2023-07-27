@@ -21,7 +21,6 @@ int main() {
       
                 if (flutuante > 0) {
                     compras_v += flutuante;
-                    
                 } else {
                     printf("\n - Valor invalido.");
                 }
@@ -33,7 +32,6 @@ int main() {
       
                 if (flutuante > 0) {
                     compras_p += flutuante;
-                    
                 } else {
                     printf("\n - Valor invalido.");
                 }
