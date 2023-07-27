@@ -2,44 +2,65 @@
 
 int main(void) {
 
-  int codigo, compras_v = 0, compras_p = 0, flutuante;
+    int codigo, compras_v = 0, compras_p = 0, flutuante;
 
-  printf("\n - Os codigos de transacao são:"
-    "\n\n  --> valor 1 = V = Transacao a vista."
-    "\n  --> valor 2 = P = Transacao a prazo."
-    "\n  --> valor < 0 = indica o fim da verificacao.\n");
+    printf("\n - Os codigos de transacao são:"
+        "\n\n  --> valor 1 = V = Transacao a vista."
+        "\n  --> valor 2 = P = Transacao a prazo."
+        "\n  --> valor < 0 = indica o fim da verificacao.\n");
 
-  for (codigo = 1; codigo >= 0; flutuante = 0) {
-    printf("\n - Digite o codigo da transacao:\n  --> ");
-    scanf("%i", &codigo);
-    switch (codigo) {
-    case 1:
-      printf("\n - Digite o valor da transacao:\n  --> ");
-      scanf("%i", &flutuante);
-      if (flutuante > 0) {
-      compras_v += flutuante;
-      } else {
-        printf("\n - Valor invalido.");
-      }
-      break;
-    case 2:
-      printf("\n - Digite o valor da transacao:\n  --> ");
-      scanf("%i", &flutuante);
-      if (flutuante > 0) {
-      compras_p += flutuante;
-      } else {
-        printf("\n - Valor invalido.");
-      }
-      break;
-    default:
-      printf("\n - Codigo invalido.\n");
+    for (codigo = 1; codigo >= 0; flutuante = 0) {
+      
+        printf("\n - Digite o codigo da transacao:\n  --> ");
+        scanf("%i", &codigo);
+    
+        switch (codigo) {
+        
+            case 1:
+    
+                printf("\n - Digite o valor da transacao:\n  --> ");
+                scanf("%i", &flutuante);
+      
+                if (flutuante > 0) {
+          
+                    compras_v += flutuante;
+                    
+                } else {
+          
+                    printf("\n - Valor invalido.");
+                    
+                }
+      
+            break;
+      
+            case 2:
+    
+                printf("\n - Digite o valor da transacao:\n  --> ");
+                scanf("%i", &flutuante);
+      
+                if (flutuante > 0) {
+          
+                    compras_p += flutuante;
+                    
+                } else {
+          
+                printf("\n - Valor invalido.");
+                
+                }
+      
+            break;
+      
+            default:
+    
+            printf("\n - Codigo invalido.\n");
+      
+        }
     }
-  }
   
-  printf("\n - Esse e o valor total das compras a vista: %i"
-    "\n - Esse e o valor total das compras a prazo: %i"
-    "\n - Esse e o valor total das compras efetuadas: %i"
-    "\n - A primeira prestacao das compras a prazo serao de: %i", compras_v, compras_p, (compras_v + compras_p), (compras_p/3));
+    printf("\n - Esse e o valor total das compras a vista: %i"
+        "\n - Esse e o valor total das compras a prazo: %i"
+        "\n - Esse e o valor total das compras efetuadas: %i"
+        "\n - A primeira prestacao das compras a prazo serao de: %i", compras_v, compras_p, (compras_v + compras_p), (compras_p/3));
 
-  return 0;
+    return 0;
 }
