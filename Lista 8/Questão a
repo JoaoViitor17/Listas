@@ -4,16 +4,13 @@ int main() {
     int idade, numero, maior_idade = 0;
 
     for (numero = 1; numero <= 10; numero++) {
-        
         printf("\n - Digite a idade da %iª Pessoa:\n -> ", numero);
         scanf("%i", &idade);
         
         if (idade >= 18) {
-            
             maior_idade++;
         }
     }
-    
     printf("\n -> %i Pessoas tem a idade maior ou igual a 18 anos.", maior_idade);
 
     return 0;
