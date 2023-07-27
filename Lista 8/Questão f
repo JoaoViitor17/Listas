@@ -14,6 +14,7 @@ int main() {
 
     for ((cont_linha = 1) && (cont_coluna = 1); (cont_linha <= linha); (cont_linha++) && (cont_coluna = 1)){
         printf("\n");
+
         while (cont_coluna <= coluna) {
             printf("   a%i%i", cont_linha, cont_coluna);
             cont_coluna++;
