@@ -1,0 +1,19 @@
+#include <stdio.h>
+#define VET 10
+int main() {
+	int vet[VET], i;
+
+	printf("\n");
+	printf(" - digite o valor da respectiva posicao do vetor:\n");
+	for (i = 0; i < VET; i++) {
+		printf(" - [%iª] posicao: ", i);
+		scanf("%i", &vet[i]);
+	}
+
+	printf("\n - esses sao os valores do vetor em ordem inversa:\n");
+	for (i = (VET - 1); i >= 0; i--) {
+		printf("\t %i", vet[i]);
+	}
+
+	return 0;
+}
