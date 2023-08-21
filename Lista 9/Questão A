@@ -1,0 +1,52 @@
+#include <stdio.h>
+#define VET 15
+int main() {
+	
+	int vet[VET], i, X = 0, Y = -1;
+	
+	printf(" - digite o valor da respectiva posicao do vetor:\n");
+	
+	for (i = 0; i < VET; i++) {
+		printf(" - [%iª] posicao: ", i);
+		scanf("%i", &vet[i]);
+	}
+	
+	printf("\n - digite duas posicoes do vetor, sendo elas:");
+	
+	do{
+		
+	    do{
+		
+		    if (X != 0) {
+			    printf("\n - valor invalido, digite outro valor\n");
+		    }
+		
+		    printf("\n - o valor de X: ");
+	        scanf("%i", &X);
+		
+	    } while (X > VET || X < 0);
+		
+	    do{
+		
+		    if (Y != -1) {
+			    printf("\n - valor invalido, digite outro valor\n");
+		    }
+		
+		    printf("\n - o valor de Y: ");
+	        scanf("%i", &Y);
+		
+	    } while (Y > VET || Y < 0);
+		
+            if (X == Y) {
+		        printf("\n - o valor de Y esta igual ao valor de X, digite um valor diferente.");
+	        }
+		
+    } while ( X == Y);
+	
+	printf("\n - essas sao as posicoes:"
+		"\n\n - X -> %i"
+		"\n - Y -> %i", vet[X], vet[Y]);
+	printf("\n\n - essa e a soma dos valores das duas posicoes: %i", (vet[X] + vet[Y]));
+	
+	return 0;
+}
