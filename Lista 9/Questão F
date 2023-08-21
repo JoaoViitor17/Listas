@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define TAM 10
+int main() {
+	
+	int i, vet1[TAM], vet2[TAM], vet3[TAM];
+	printf("\n - digite os valores do primeiro vetor:\n");
+	for (i = 0; i < TAM; i++) {
+		printf("\n - posicao [%i]: ", i);
+		scanf("%i", &vet1[i]);
+	}
+	printf("\n\n - digite os valores do segundo vetor:\n");
+	for (i = 0; i < TAM; i++) {
+		printf("\n - posicao [%i]:", i);
+		scanf("%i", &vet2[i]);
+	}
+	for (i = 0; i < TAM; i++) {
+		if (i % 2 == 0) {
+			vet3[i] = vet1[i];
+		}
+		if (i % 2 != 0) {
+			vet3[i] = vet2[i];
+		}
+	}
+	printf("\n\n - os valores do terceiro vetor sao:\n");
+	for (i = 0; i < TAM; i++) {
+		printf("\n - %i", vet3[i]);
+	}
+	return 0;
+}
