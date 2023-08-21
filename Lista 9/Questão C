@@ -1,0 +1,34 @@
+#include <stdio.h>
+#define VET 5
+int main() {
+	int vet[VET], i, i2 = 0, ref, mai_ref = 0, men_ref = 0, igu_ref = 0, vet2[VET] = {0};
+	printf(" - digite o valor da respectiva posicao do vetor:\n");
+	for (i = 0; i < VET; i++) {
+		printf(" - [%iª] posicao: ", i);
+		scanf("%i", &vet[i]);
+	}
+	printf("\n - digite um valor inteiro como referencia: ");
+	scanf("%i", &ref);
+	
+	for (i = 0; i < VET; i++) {
+		if ( vet[i] > ref) {
+		    if (vet[0] != 0) {
+			    i2++;
+		    }
+			mai_ref++;
+			vet2[i2] = vet[i];
+		} else if ( vet[i] < ref) {
+			men_ref++;
+		} else if ( vet[i] == ref) {
+			igu_ref++;
+		}
+	}
+	printf("\n - %i valores do vetor sao menores que a referencia", men_ref);
+	printf("\n - %i valores do vetor sao iguais a referencia", igu_ref);
+	printf("\n - %i valores do vetor sao maiores que a referencia:", mai_ref);
+	printf("\n - esses valores sao:\n");
+	for (i = 1; i <= mai_ref; i++) {
+		printf("  %i,", vet2[i]);
+	}
+	return 0;
+}
