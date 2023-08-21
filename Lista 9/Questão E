@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define VET 5
+int main() {
+	int vet[VET], i, i2 = 0, X, i_pos = 0, posi, pos[VET];
+	printf(" - digite o valor da respectiva posicao do vetor:\n\n");
+	for (i = 0; i < VET; i++) {
+		printf(" - [%iª] posicao: ", i);
+		scanf("%i", &vet[i]);
+	}
+	printf("\n - digite um valor: ");
+	scanf("%i", &X);
+	for (i = 0; i < VET; i++) {
+		if ((vet[i]) == X) {
+			pos[i2] = i;
+			posi = i;
+			i2++;
+			i_pos++;
+		}
+	}
+	if (i_pos > 0) {
+		if (i_pos == 1) {
+			printf("\n - um valor foi encontrado na %iª posicao.", posi);
+		} else if (i_pos > 1) {
+			printf("\n - %i valores foram encontrados nas posicoes:\n\n", i_pos);
+			for (i2 = 0; i2 < i_pos; i2++) {
+				printf("\t %i", pos[i2]);
+			}
+		}
+	} else {
+		printf("\n - nenhuma posição para o valor digitado foi encontrada.");
+	}
+        return 0;
+}
