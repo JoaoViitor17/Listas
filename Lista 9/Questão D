@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define VET 10
+int main() {
+	int vet1[VET], vet2[VET], i, produto = 0;
+	printf(" - digite o valor da respectiva posicao do primeiro vetor:\n");
+	for (i = 0; i < VET; i++) {
+		printf(" - [%iª] posicao: ", i);
+		scanf("%i", &vet1[i]);
+	}
+	printf("\n");
+	printf(" - digite o valor da respectiva posicao do segundo vetor:\n");
+	for (i = 0; i < VET; i++) {
+		printf(" - [%iª] posicao: ", i);
+		scanf("%i", &vet2[i]);
+	}
+        for (i = 0; i < VET; i++) {
+		produto += (vet1[i] * vet2[i]);
+	}
+	printf("\n - esse e o resultado do produto escalar dos dois vetores, tal como a1.b1 + a2.b2 ..... an.bn : %i", produto);
+	return 0;
+}
