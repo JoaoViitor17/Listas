@@ -2,7 +2,7 @@
 #define col 5
 #define lin 5
 int main() {
-	int mat [lin] [col], cont, cont2, somal4 = 0, somac2 = 0, somadgp = 0, somag;
+	int mat [lin] [col], cont, cont2, somal4 = 0, somac2 = 0, somadgp = 0, somag = 0;
 
 	printf("\n - digite os valores de cada posicao da matriz:\n");
 	
@@ -32,9 +32,8 @@ int main() {
 	}
 
 	printf("\n\n - soma da linha 4: %i"
-		"\n - soma da coluna 3: %i"
+		"\n - soma da coluna 2: %i"
 		"\n - soma da diagonal principal: %i"
 		"\n - soma geral dos elementos: %i", somal4, somac2, somadgp, somag);
-	
 	return 0;
 }
