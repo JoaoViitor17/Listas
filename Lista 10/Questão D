@@ -1,0 +1,30 @@
+#include <stdio.h>
+#define n 6
+int main() {
+	int mat[n][n], i, j, men_ele, pos_i, pos_j;
+	
+	printf("\n - digite os valores de cada posicao da matriz:\n");
+	
+	for ( i = 0; i < n; i++) {
+		
+		for ( j = 0; j < n; j++) {
+			printf("\n posicao [%i][%i]: ", i, j);
+			scanf("%i", &mat[i][j]);
+			if ( j == 0 && i == 0 && (i + j) == (n - 1)) {
+				men_ele = mat[i][j];
+				pos_i = i;
+				pos_j = j;
+			} else if ((i + j) == (n - 1)) {
+				if ( mat[i][j] < men_ele){
+					men_ele = mat[i][j];
+					pos_i = i;
+					pos_j = j;
+				}
+			}
+		}
+	}
+	printf("\n - esse foi o menor elemento encontrado: %i"
+		"\n - e essa foi a posicao: [%i][%i]", men_ele, pos_i, pos_j);
+	
+  	return 0;
+}
