@@ -1,0 +1,40 @@
+#include <stdio.h>
+#define col 5
+#define lin 5
+int main() {
+	int mat [lin] [col], cont, cont2, somal4 = 0, somac2 = 0, somadgp = 0, somag;
+
+	printf("\n - digite os valores de cada posicao da matriz:\n");
+	
+	for ( cont = 1; cont <= lin; cont++) {
+		
+		for ( cont2 = 1; cont2 <= col; cont2++) {
+			printf("\n posicao [%i][%i]: ", cont, cont2);
+			scanf("%i", &mat[cont][cont2]);
+			if (cont == 4) {
+				somal4 += mat[cont][cont2];
+			}
+			if (cont2 == 2) {
+				somac2 += mat[cont][cont2];
+			}
+			if (cont == cont2) {
+				somadgp += mat[cont][cont2];
+			}
+			somag += mat[cont][cont2];
+		}
+	}
+	
+	for ( cont = 1; cont <= lin; cont++) {
+		printf("\n");
+		for ( cont2 = 1; cont2 <= col; cont2++) {
+			printf(" %i ", mat[cont][cont2]);
+		}
+	}
+
+	printf("\n\n - soma da linha 4: %i"
+		"\n - soma da coluna 3: %i"
+		"\n - soma da diagonal principal: %i"
+		"\n - soma geral dos elementos: %i", somal4, somac2, somadgp, somag);
+	
+	return 0;
+}
