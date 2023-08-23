@@ -1,21 +1,19 @@
 #include <stdio.h>
-#define lin 3
-#define col 3
+#define n 3
 int main() {
-	int mat[lin][col], i, j;
+	int mat[n][n], i, j;
 	
 	printf("\n - digite os valores de cada posicao da matriz:\n");
 	
-	for ( i = 1; i <= lin; i++) {
-		
-		for ( j = 1; j <= col; j++) {
+	for ( i = 0; i < n; i++) {
+		for ( j = 0; j < n; j++) {
 			printf("\n posicao [%i][%i]: ", i, j);
 			scanf("%i", &mat[i][j]);
 		}
 	}
-	for ( i = 1; i <= lin; i++) {
+	for ( i = 0; i < n; i++) {
 		printf("\n");
-		for ( j = 1; j <= col; j++) {
+		for ( j = 0; j < n; j++) {
 			printf(" [%i] ", (3 * mat[i][j]));
 		}
 	}
