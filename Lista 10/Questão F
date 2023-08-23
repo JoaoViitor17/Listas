@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+	int lin, col, i, j, cont;
+	printf("\n - vamos criar uma matriz, digite o numero de linhas: ");
+	scanf("%i", &lin);
+	printf("\n - agora digite o numero de colunas: ");
+	scanf("%i", &col);
+	int mat[lin][col], vet[col];
+	for ( i = 0; i < lin; i++) {
+		
+		for ( j = 0; j < col; j++) {
+			printf("\n posicao [%i][%i]: ", i, j);
+			scanf("%i", &mat[i][j]);
+			if (i == 0 && j == 0){
+				vet[j] = mat[i][j];
+			} else {
+				vet[j] += mat[i][j];
+			}
+		}
+	}
+	printf("\n - esse e o vetor:");
+	for (cont = 0; cont < col; cont++) {
+		printf(" %i ", vet[cont]);
+	}
+	
+  return 0;
+}
