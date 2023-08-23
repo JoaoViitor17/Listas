@@ -2,32 +2,32 @@
 #define col 5
 #define lin 5
 int main() {
-	int mat [lin] [col], cont, cont2, somal4 = 0, somac2 = 0, somadgp = 0, somag = 0;
+	int mat [lin] [col], i, j, somal4 = 0, somac2 = 0, somadgp = 0, somag = 0;
 
 	printf("\n - digite os valores de cada posicao da matriz:\n");
 	
-	for ( cont = 1; cont <= lin; cont++) {
+	for ( i = 1; i <= lin; i++) {
 		
-		for ( cont2 = 1; cont2 <= col; cont2++) {
-			printf("\n posicao [%i][%i]: ", cont, cont2);
-			scanf("%i", &mat[cont][cont2]);
-			if (cont == 4) {
-				somal4 += mat[cont][cont2];
+		for ( j = 1; j <= col; j++) {
+			printf("\n posicao [%i][%i]: ", i, j);
+			scanf("%i", &mat[i][j]);
+			if (i == 4) {
+				somal4 += mat[i][j];
 			}
-			if (cont2 == 2) {
-				somac2 += mat[cont][cont2];
+			if (j == 2) {
+				somac2 += mat[i][j];
 			}
-			if (cont == cont2) {
-				somadgp += mat[cont][cont2];
+			if (i == j) {
+				somadgp += mat[i][j];
 			}
-			somag += mat[cont][cont2];
+			somag += mat[i][j];
 		}
 	}
 	
-	for ( cont = 1; cont <= lin; cont++) {
+	for ( i = 1; i <= lin; i++) {
 		printf("\n");
-		for ( cont2 = 1; cont2 <= col; cont2++) {
-			printf(" %i ", mat[cont][cont2]);
+		for ( j = 1; j <= col; j++) {
+			printf(" %i ", mat[i][j]);
 		}
 	}
 
